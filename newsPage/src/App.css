@@ -1,0 +1,35 @@
+.card-contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Gap between cards */
+    padding: 15px; /* Padding around the grid */
+    justify-items: center; /* Center items in each grid cell */
+}
+
+.card {
+    overflow: hidden; /* Ensures the content does not overflow the card */
+    border: 1px solid #ddd; /* Optional border for the cards */
+    border-radius: 5px; /* Optional rounded corners */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.card-title {
+    font-size: 15px;
+}
+
+.search {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Additional media query for centering on smaller screens */
+@media (max-width: 600px) {
+    .card-contain {
+        grid-template-columns: 1fr; /* One card per row */
+        justify-content: center; /* Center the grid itself */
+    }
+}
